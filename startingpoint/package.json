@@ -1,0 +1,17 @@
+{
+  "name": "startingpoint",
+  "version": "1.0.0",
+  "description": "The first try at installing and setting up mocha with chai",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec"
+  },
+  "author": "Jose Hernandez",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.5.0",
+    "express": "^4.15.2",
+    "mocha": "^3.2.0",
+    "request": "^2.81.0"
+  }
+}
