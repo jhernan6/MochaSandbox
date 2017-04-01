@@ -18,7 +18,7 @@ app.get("/hexToRgb", function(req, res){
 
 	var hex = req.query.hex;
 
-	var rgb = converter(hex);
+	var rgb = converter.hexToRgb(hex);
 
 	res.send(JSON.stringify(rgb));
 
