@@ -1,0 +1,14 @@
+{
+  "name": "take2",
+  "version": "1.0.0",
+  "description": "Attempt at following Mocha JS getting started section",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jose Hernandez",
+  "license": "ISC",
+  "dependencies": {
+    "mocha": "^3.2.0"
+  }
+}
