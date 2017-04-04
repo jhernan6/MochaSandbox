@@ -18,8 +18,10 @@ function alwaysEven(num1, num2){
 	}
 }
 
+//This is the beginning of the whole test suite
 describe("Simple assertion tests", function(){
 
+	//First try at creating tests
 	describe("Tests that will be using simple assert and assert.ok",function(){
 
 		var bool1 = false;
@@ -59,6 +61,7 @@ describe("Simple assertion tests", function(){
 
 	});
 
+	//Second attempt creating test for a help function
 	describe("Simple assert equal tests for our alwaysEven helper function", function(){
 
 		it('assert on two odd numbers', function(){
