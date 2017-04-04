@@ -3,6 +3,21 @@ var Chance = require('chance');
 
 var chance = new Chance();
 
+
+//This is a helper function that we will use for testing
+function alwaysEven(num1, num2){
+
+	var total = num1 + num2;
+
+	if (total % 2 == 0){
+		return total;
+	}
+	else
+	{
+		return total+1;
+	}
+}
+
 describe("Simple assertion tests", function(){
 
 	describe("Tests that will be using simple assert and assert.ok",function(){
@@ -11,7 +26,7 @@ describe("Simple assertion tests", function(){
 		var randnum = chance.integer({min: 1, max: 100});
 		var str = chance.string();
 
-		console.log(str);
+		console.log(alwaysEven(1,2));
 
 		it('assert on a random boolean value to be true', function(){
 
