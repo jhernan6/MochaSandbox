@@ -22,20 +22,19 @@ describe("Simple assertion tests", function(){
 
 	describe("Tests that will be using simple assert and assert.ok",function(){
 
-		var bool = chance.bool();
+		var bool1 = false;
+		var bool2 = true;
 		var randnum = chance.integer({min: 1, max: 100});
 		var str = chance.string();
 
-		console.log(alwaysEven(1,2));
+		it('assert that the first bool is false', function(){
 
-		it('assert on a random boolean value to be true', function(){
-
-			assert(bool === false, "The random generated boolean was true");
+			assert(bool1 === false, "This bool should be false");
 		});
 
-		it('assert on a random number to see if it is even', function(){
+		it('assert tha the second bool is true', function(){
 			
-			assert((randnum % 2) === 0, "The random generated number is not even");
+			assert(bool2 === true, "This bool should be true");
 		});
 
 		it("assert on a random string to be larger than 15 chars", function(){
@@ -60,7 +59,26 @@ describe("Simple assertion tests", function(){
 
 	});
 
+	describe("Simple assert equal tests for our alwaysEven helper function", function(){
 
+		it('assert on two odd numbers', function(){
+
+			assert.equal(alwaysEven(1,3)%2, 0, "The result of adding two odd numbers should be even" );
+		});
+
+		it('assert on two even  numbers', function(){
+			assert.equal(alwaysEven(2,4)%2, 0, "The result of adding two even numbers should be even");
+		})
+
+		it('assert on adding an odd and even number', function(){
+			assert.equal(alwaysEven(1,2)%2, 0, "The function should turn the result to an even number");
+		})
+
+		it('assert on adding two random natural numbers', function(){
+			assert.equal(alwaysEven(chance.natural(),chance.natural())%2, 0, "The function should made the addion of the randum number even");
+		})
+
+	});
 
 
 })
