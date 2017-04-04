@@ -27,7 +27,7 @@ describe("Simple assertion tests", function(){
 		var bool1 = false;
 		var bool2 = true;
 		var randnum = chance.integer({min: 1, max: 100});
-		var str = chance.string();
+		var str = chance.string({length: 20});
 
 		it('assert that the first bool is false', function(){
 
@@ -39,24 +39,44 @@ describe("Simple assertion tests", function(){
 			assert(bool2 === true, "This bool should be true");
 		});
 
-		it("assert on a random string to be larger than 15 chars", function(){
+		it("assert on a random number to verify it is larger than 0", function(){
 
-			assert(str.length >= 15, "The string is less than 15 chars");
+			assert(randnum > 0, "The number cannot be less than 1");
 		});
 
-		it("assert on the same random boolean using ok", function(){
+		it("assert on a random number to verify it is less than 101", function(){
 
-			assert.ok(bool === true, "The random generated boolean  was false");
+			assert(randnum < 101, "The number cannot be more than 100");
 		});
 
-		it("assert on the same random number to check how large it is", function(){
+		it("assert on the length of the randum string", function(){
 
-			assert.ok(randnum > 50, "The random number is less than 50");
+			assert(str.length === 20, "The string can only be 20 chars long");
 		});
 
-		it("assert on the random string to see if it is less than 10 chars", function(){
+		it("assert on the same first bool using ok", function(){
 
-			assert.ok(str.length <= 10, "The random string is larger than 10 chars");
+			assert.ok(bool1	=== false, "This bool should be false");
+		});
+
+		it('assert on the same second bool using ok', function(){
+
+			assert.ok(bool2 === true, "this bool should be true");
+		});
+
+		it("assert on the same random number to check it is larger than 0", function(){
+
+			assert.ok(randnum > 0, "The number cannot be less than 1");
+		});
+
+		it('assert on the same random number to check it is less than 101', function(){
+
+			assert.ok(randnum < 101, "The number cannot be larger than 100");
+		});
+
+		it("assert on the length of the same random string", function(){
+
+			assert.ok(str.length === 20, "The random string can only be 20 chars long");
 		});
 
 	});
