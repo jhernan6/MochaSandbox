@@ -111,9 +111,17 @@ describe("Simple assertion tests", function(){
 			assert.notEqual(alwaysEven(1,3)%2, 1, "The result of adding two odd numbers should be even");
 		});
 
-		it('assert not equal ontwo even numbers', function(){
+		it('assert not equal on two even numbers', function(){
 
 			assert.notEqual(alwaysEven(2,4)%2, 1, "The result of adding two even numbers should be even");
+		});
+
+		it('assert not equal on an odd and even number', function(){
+
+		});
+
+		it('assert not equal on two random numbers', function(){
+
 		});
 	});
 
