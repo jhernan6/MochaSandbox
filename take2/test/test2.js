@@ -117,7 +117,7 @@ describe("Simple assertion tests", function(){
 		});
 
 		it('assert not equal on an odd and even number', function(){
-
+			assert.notEqual(alwaysEven(1,2)%2, 1, "The function should turn them into an even numbder");
 		});
 
 		it('assert not equal on two random numbers', function(){
