@@ -17,5 +17,19 @@ describe("All the tests below will be using deep asserts", function(){
 					'address':'123 Main St.', 'city':'Los Angeles', 'country':"USA"};
 		var clone = {'fname':'Benjamin', 'lname':'Button', 'age':'24', 
 					'address':'123 Main St.', 'city':'Los Angeles', 'country':"USA"};
+
+		it("Using deepEqual to make sure two string arrays are the same", function(){
+
+			assert.deepEqual(brands, brandsCopy, "The list should be the same");
+		});
+
+		it('Using deepEqual to make sure the two array of numbers are the same', function(){
+
+			assert.deepEqual(numarray, numarray2, "The two number arrays should be the same");
+		});
+
+		it("Using deepEqual to make sure the two objects are the same", function(){
+			assert.deepEqual(humna, clone, "The elements in the two objects should be the same");
+		});
 	})
 });
