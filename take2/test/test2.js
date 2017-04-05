@@ -103,5 +103,19 @@ describe("Simple assertion tests", function(){
 
 	});
 
+	//Created the same test above but using the not equal assertion
+	describe("Simple assert not equal test for our alwaysEven helper function", function(){
+		
+		it('assert not equal on two odd numbers', function(){
+
+			assert.notEqual(alwaysEven(1,3)%2, 1, "The result of adding two odd numbers should be even");
+		});
+
+		it('assert not equal ontwo even numbers', function(){
+
+			assert.notEqual(alwaysEven(2,4)%2, 1, "The result of adding two even numbers should be even");
+		});
+	});
+
 
 })
