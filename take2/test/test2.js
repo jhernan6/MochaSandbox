@@ -98,7 +98,7 @@ describe("Simple assertion tests", function(){
 		})
 
 		it('assert on adding two random natural numbers', function(){
-			assert.equal(alwaysEven(chance.natural(),chance.natural())%2, 0, "The function should made the addion of the randum number even");
+			assert.equal(alwaysEven(chance.natural(),chance.natural())%2, 0, "The function should make the result of the randum numbers even");
 		})
 
 	});
@@ -121,7 +121,7 @@ describe("Simple assertion tests", function(){
 		});
 
 		it('assert not equal on two random numbers', function(){
-
+			assert.notEqual(alwaysEven(chance.natural(), chance.natural())%2, 1, "The function should make the result of the randum numbers even");
 		});
 	});
 
