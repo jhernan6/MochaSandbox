@@ -5,16 +5,17 @@ var change = new Chance();
 
 describe("All the tests below will be using deep asserts", function(){
 
+	
+	var brands = ["Nike", "Adidas", "Reebok", "Converse"];
+	var numarray = [2, 5, 6, 12, 64];
+	var human = {'fname':'Benjamin', 'lname':'Button', 'age':'24', 
+					'address':'123 Main St.', 'city':'Los Angeles', 'country':"USA"};
+
 	describe("Running deep equal tets", function(){
 
-		var brands = ["Nike", "Adidas", "Reebok", "Converse"];
+		
 		var brandsCopy = ["Nike", "Adidas", "Reebok", "Converse"];
-
-		var numarray = [2, 5, 6, 12, 64];
 		var numarray2 = [2, 5, 6, 12, 64];
-
-		var human = {'fname':'Benjamin', 'lname':'Button', 'age':'24', 
-					'address':'123 Main St.', 'city':'Los Angeles', 'country':"USA"};
 		var clone = {'fname':'Benjamin', 'lname':'Button', 'age':'24', 
 					'address':'123 Main St.', 'city':'Los Angeles', 'country':"USA"};
 
@@ -29,7 +30,7 @@ describe("All the tests below will be using deep asserts", function(){
 		});
 
 		it("Using deepEqual to make sure the two objects are the same", function(){
-			assert.deepEqual(humna, clone, "The elements in the two objects should be the same");
+			assert.deepEqual(human, clone, "The elements in the two objects should be the same");
 		});
 	})
 });
