@@ -32,5 +32,18 @@ describe("All the tests below will be using deep asserts", function(){
 		it("Using deepEqual to make sure the two objects are the same", function(){
 			assert.deepEqual(human, clone, "The elements in the two objects should be the same");
 		});
-	})
+	});
+
+	describe("Running notDeepEqual test below inside other describes", function(){
+
+		describe("Running notDeepEqual on a lowercase brands list", function(){
+
+			var lowerBrands = ["nike","adidas","reebok","converse"];
+			it("running test now for lowerBrands",function(){
+				assert.notDeepEqual(brands, lowerBrands, "These two list are different");
+			});
+		});
+
+
+	});
 });
