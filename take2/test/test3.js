@@ -1,7 +1,4 @@
 var assert = require('assert');
-var Chance = require("chance");
-
-var change = new Chance();
 
 describe("Testfile #3. All the tests below will be using deep asserts", function(){
 
