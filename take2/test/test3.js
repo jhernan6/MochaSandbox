@@ -44,6 +44,22 @@ describe("Testfile #3. All the tests below will be using deep asserts", function
 			});
 		});
 
+		describe("Running notDeepEqual on a scramble number array", function(){
+			var numScramble = [2, 5, 6, 64, 12];
+			it('running test now for scrambled array numbers', function(){
+				assert.notDeepEqual(numarray, numScramble, "The numbers are the same but different order");
+			});
+		});
+
+		describe('Running notDeepEqual on two objects that have differnt ordered elements and one different value', function(){
+			var humanScramble = {'fname':'Benjamin', 'lname':'Button', 'address':'123 Main St.',
+					 'city':'Los Angeles', 'country':"USA", 'age':'26'};
+			it("running test now for scrambled human test", function(){
+				assert.notDeepEqual(human, humanScramble, "The elements are in different order and one has a different value");
+			});
+
+		});
+
 
 	});
 });
