@@ -40,7 +40,21 @@ describe("Testfile #4. All the test below will be using strict equal", function(
 				describe("The tests will begin shortly",function(){
 					describe("Alright after this describe", function(){
 						describe("Simple tests on some strings",function(){
+							it("Comparing two lower chase strings", function(){
+								assert.strictEqual("hello",'hello','The two strings should bethe same');
+							});
 
+							it("Comparing two uppercase strings", function(){
+								assert.strictEqual('WORLD',"WORLD", "The two strings should be the same");
+							});
+
+							it("Comparing to words with proper capitalization", function(){
+								assert.strictEqual('Node', "Node","The two strings should be the same");
+							});
+
+							it('Comparing a variable to a string', function(){
+								assert.strictEqual(oneString,"mocha","The variable and the string should be the same");
+							});
 						});
 					});
 				});
