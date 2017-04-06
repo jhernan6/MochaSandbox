@@ -41,11 +41,26 @@ describe("Testfile #4. All the test below will be using strict equal", function(
 					describe("Alright after this describe", function(){
 						describe("Simple tests on some strings",function(){
 							it("Comparing two lower chase strings", function(){
-								assert.strictEqual("hello",'hello','The two strings should bethe same');
+								assert.strictEqual("hello",'hello','The two strings should be the same');
 							});
 
 							it("Comparing two uppercase strings", function(){
 								assert.strictEqual('WORLD',"WORLD", "The two strings should be the same");
+							});
+
+							describe("This describe is between the four test in this sectoin", function(){
+								describe("The char test will be found inside these describes", function(){
+									describe('Lets go a bit deeper', function(){
+										describe("This is like describe-ception", function(){
+											describe("Alright the char tests are here now", function(){
+
+												it("Comparing two lowercase chars", function(){
+													assert.strictEqual("n",'n', "The two chars should be the same");
+												});
+											});
+										});
+									});
+								});
 							});
 
 							it("Comparing to words with proper capitalization", function(){
