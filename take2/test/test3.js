@@ -3,7 +3,7 @@ var Chance = require("chance");
 
 var change = new Chance();
 
-describe("All the tests below will be using deep asserts", function(){
+describe("Testfile #3. All the tests below will be using deep asserts", function(){
 
 	
 	var brands = ["Nike", "Adidas", "Reebok", "Converse"];

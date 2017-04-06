@@ -19,7 +19,7 @@ function alwaysEven(num1, num2){
 }
 
 //This is the beginning of the whole test suite
-describe("Simple assertion tests", function(){
+describe("Testfile #2. Simple assertion tests", function(){
 
 	//First try at creating tests
 	describe("Tests that will be using simple assert and assert.ok",function(){

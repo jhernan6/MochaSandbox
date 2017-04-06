@@ -3,7 +3,7 @@ var assert = require('assert');
 
 //First example that is shown in the Getting Started section
 
-describe("Array", function() {
+describe("Testfile #1. Simple Array test", function() {
 
 	describe("#indexOf()", function() {
 
