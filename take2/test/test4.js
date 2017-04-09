@@ -91,4 +91,8 @@ describe("Testfile #4. All the test below will be using strict equal", function(
 
 	});
 
+	describe("The tests below will be using the notStrickEqual", function(){
+
+	});
+
 });
