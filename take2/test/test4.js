@@ -103,6 +103,25 @@ describe("Testfile #4. All the test below will be using strict equal", function(
 				assert.notStrictEqual(numbah, "9", "They have the same value but are not the same type");
 			});
 		});
+
+		describe("Simple notStrictEqual tests on booleans", function(){
+
+			it("Comparing a boolean value to a string", function(){
+				assert.notStrictEqual(true, "true", "They have the same value but not the same type");
+			});
+
+			it("Comparing a boolean value to its int equivalent", function(){
+				assert.notStrictEqual(false, 0, "They both represent the same but are not the same type");
+			});
+
+			it("Comparing a boolean variable to a string", function(){
+				assert.notStrictEqual(bool, "fasle","They both have the same value but are not the same type");
+			});
+
+			it("Comparing a boolean variable to an int reprensentation", function(){
+				assert.notStrictEqual(bool, 0, "They both have the same value but are not the same type");
+			});
+		});
 	});
 
 });
