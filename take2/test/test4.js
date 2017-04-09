@@ -91,8 +91,18 @@ describe("Testfile #4. All the test below will be using strict equal", function(
 
 	});
 
-	describe("The tests below will be using the notStrickEqual", function(){
+	describe("The tests below will be using the notStrictEqual", function(){
+		
+		describe("Simple notStrictEqual tests on numbers", function(){
+			
+			it("Comparing an int/double to a string", function(){
+				assert.notStrictEqual(1, "1", "They have the same value but are not the same type");
+			});
 
+			it("Comparing variable number to string", function(){
+				assert.notStrictEqual(numbah, "9", "They have the same value but are not the same type");
+			});
+		});
 	});
 
 });
